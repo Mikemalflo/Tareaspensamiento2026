@@ -1,0 +1,42 @@
+Inicio
+
+Pedir al usuario cantidad de números (n)
+
+Crear lista vacía
+
+Para i desde 1 hasta n hacer:
+    Pedir número
+    Guardar número en la lista
+
+pares = 0
+impares = 0
+positivos = 0
+negativos = 0
+ceros = 0
+suma = 0
+
+Para cada número en la lista hacer:
+    suma = suma + número
+
+    Si número == 0:
+        ceros = ceros + 1
+    Sino si número > 0:
+        positivos = positivos + 1
+    Sino:
+        negativos = negativos + 1
+
+    Si número % 2 == 0:
+        pares = pares + 1
+    Sino:
+        impares = impares + 1
+
+mayor = número mayor de la lista
+menor = número menor de la lista
+
+Mostrar lista
+Mostrar suma
+Mostrar mayor
+Mostrar menor
+Mostrar pares, impares, positivos, negativos y ceros
+
+Fin
