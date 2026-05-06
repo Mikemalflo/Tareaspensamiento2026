@@ -1,0 +1,54 @@
+
+matriz = []
+
+print("Ingrese los elementos del cuadrado 3x3:")
+
+for i in range(3):
+    fila = []
+    for j in range(3):
+        valor = int(input(f"Elemento [{i}][{j}]: "))
+        fila.append(valor)
+    matriz.append(fila)
+
+
+suma_filas = [0] * 3
+suma_columnas = [0] * 3
+
+for i in range(3):
+    for j in range(3):
+        suma_filas[i] += matriz[i][j]
+        suma_columnas[j] += matriz[i][j]
+
+
+diag_principal = 0
+diag_secundaria = 0
+
+for i in range(3):
+    diag_principal += matriz[i][i]
+    diag_secundaria += matriz[i][2 - i]
+
+
+print("\nSuma de filas:", suma_filas)
+print("Suma de columnas:", suma_columnas)
+print("Diagonal principal:", diag_principal)
+print("Diagonal secundaria:", diag_secundaria)
+
+
+constante = suma_filas[0]
+
+es_magico = True
+
+
+for i in range(3):
+    if suma_filas[i] != constante or suma_columnas[i] != constante:
+        es_magico = False
+
+
+if diag_principal != constante or diag_secundaria != constante:
+    es_magico = False
+
+
+if es_magico:
+    print("\nEs un cuadrado mágico ✨")
+else:
+    print("\nNo es un cuadrado mágico ❌")
